@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="New Venture AI helps businesses attract customers, automate operations, and increase profitability with practical AI solutions.">
-  <title>New Venture AI | AI Business Automation</title>
+  <meta name="description" content="New Venture AI helps small businesses automate repetitive work, improve operations, and turn more opportunities into revenue.">
+  <title>New Venture AI | AI Automation for Small Business</title>
 
   <style>
     * {
@@ -13,256 +13,423 @@
       padding: 0;
     }
 
+    html {
+      scroll-behavior: smooth;
+    }
+
     body {
-      font-family: Arial, Helvetica, sans-serif;
+      font-family: Inter, Arial, Helvetica, sans-serif;
       color: #172033;
       background: #f7f9fc;
       line-height: 1.6;
     }
 
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .container {
+      width: min(1120px, 92%);
+      margin: 0 auto;
+    }
+
+    /* NAVIGATION */
+
     nav {
-      background: #ffffff;
-      border-bottom: 1px solid #e7ebf2;
-      padding: 20px 6%;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
       position: sticky;
       top: 0;
-      z-index: 10;
+      z-index: 1000;
+      background: rgba(255,255,255,0.96);
+      border-bottom: 1px solid #e5e9f2;
+      backdrop-filter: blur(12px);
+    }
+
+    .nav-inner {
+      min-height: 74px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
     }
 
     .logo {
-      font-size: 22px;
+      font-size: 21px;
       font-weight: 800;
-      color: #172033;
+      letter-spacing: -0.5px;
     }
 
     .logo span {
       color: #4f46e5;
     }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #566176;
+    }
+
+    .nav-links a:hover {
+      color: #4f46e5;
+    }
+
     .nav-button {
-      text-decoration: none;
       background: #4f46e5;
-      color: white;
-      padding: 11px 20px;
-      border-radius: 8px;
+      color: white !important;
+      padding: 11px 18px;
+      border-radius: 9px;
+    }
+
+    /* HERO */
+
+    .hero {
+      padding: 100px 0 90px;
+      background:
+        radial-gradient(circle at top right, rgba(99,102,241,.16), transparent 35%),
+        linear-gradient(180deg, #ffffff 0%, #f7f9fc 100%);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.05fr .95fr;
+      align-items: center;
+      gap: 70px;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 20px;
+      padding: 7px 12px;
+      border-radius: 999px;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-size: 13px;
       font-weight: 700;
     }
 
-    .hero {
-      background: linear-gradient(135deg, #172554, #4f46e5);
-      color: white;
-      padding: 95px 20px 90px;
-      text-align: center;
-    }
-
     .hero h1 {
-      font-size: clamp(42px, 7vw, 72px);
+      font-size: clamp(42px, 6vw, 68px);
       line-height: 1.05;
-      max-width: 900px;
-      margin: auto;
-      letter-spacing: -2px;
+      letter-spacing: -2.5px;
+      margin-bottom: 24px;
     }
 
-    .hero p {
-      max-width: 700px;
-      margin: 25px auto 35px;
-      font-size: 20px;
-      color: #e8eaff;
+    .hero h1 span {
+      color: #4f46e5;
     }
 
-    .hero-button {
+    .hero-text {
+      font-size: 19px;
+      color: #5d687b;
+      max-width: 650px;
+      margin-bottom: 32px;
+    }
+
+    .hero-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+
+    .primary-button,
+    .secondary-button {
       display: inline-block;
-      background: white;
-      color: #4338ca;
-      padding: 15px 28px;
-      border-radius: 9px;
-      text-decoration: none;
-      font-weight: 800;
-      font-size: 17px;
+      padding: 14px 22px;
+      border-radius: 10px;
+      font-weight: 700;
+      transition: .2s ease;
     }
+
+    .primary-button {
+      background: #4f46e5;
+      color: white;
+      box-shadow: 0 10px 25px rgba(79,70,229,.22);
+    }
+
+    .primary-button:hover {
+      transform: translateY(-2px);
+      background: #4338ca;
+    }
+
+    .secondary-button {
+      border: 1px solid #d9deea;
+      background: white;
+      color: #344054;
+    }
+
+    .secondary-button:hover {
+      border-color: #4f46e5;
+      color: #4f46e5;
+    }
+
+    .hero-card {
+      background: #111827;
+      color: white;
+      padding: 32px;
+      border-radius: 20px;
+      box-shadow: 0 25px 70px rgba(17,24,39,.18);
+    }
+
+    .hero-card-top {
+      color: #9ca3af;
+      font-size: 13px;
+      margin-bottom: 24px;
+    }
+
+    .metric {
+      padding: 20px 0;
+      border-top: 1px solid #293244;
+    }
+
+    .metric strong {
+      display: block;
+      font-size: 28px;
+      margin-bottom: 4px;
+    }
+
+    .metric span {
+      color: #aab2c0;
+      font-size: 14px;
+    }
+
+    /* SECTIONS */
 
     section {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
+      padding: 90px 0;
     }
 
     .section-heading {
-      text-align: center;
+      max-width: 700px;
       margin-bottom: 45px;
     }
 
     .section-heading h2 {
       font-size: 38px;
-      margin-bottom: 12px;
+      line-height: 1.15;
+      letter-spacing: -1px;
+      margin-bottom: 14px;
     }
 
     .section-heading p {
-      color: #667085;
-      max-width: 650px;
-      margin: auto;
+      color: #687386;
+      font-size: 17px;
     }
+
+    /* SERVICES */
 
     .services {
+      background: white;
+    }
+
+    .service-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 22px;
     }
 
-    .card {
+    .service-card {
+      padding: 30px;
+      border: 1px solid #e5e9f2;
+      border-radius: 16px;
       background: white;
-      padding: 32px;
-      border: 1px solid #e6eaf0;
-      border-radius: 14px;
-      box-shadow: 0 8px 25px rgba(15, 23, 42, 0.06);
+      transition: .2s ease;
     }
 
-    .card-icon {
-      font-size: 30px;
-      margin-bottom: 18px;
+    .service-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 18px 45px rgba(23,32,51,.08);
     }
 
-    .card h3 {
-      font-size: 21px;
+    .service-number {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      background: #eef2ff;
+      color: #4f46e5;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .service-card h3 {
+      font-size: 20px;
       margin-bottom: 10px;
     }
 
-    .card p {
-      color: #667085;
+    .service-card p {
+      color: #687386;
+      font-size: 15px;
     }
+
+    /* PROCESS */
 
     .process {
-      background: #eef2ff;
-      max-width: none;
+      background: #f7f9fc;
     }
 
-    .process-inner {
-      max-width: 1100px;
-      margin: auto;
-      padding: 80px 20px;
-    }
-
-    .steps {
+    .process-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 25px;
+      gap: 22px;
     }
 
-    .step {
+    .process-card {
       background: white;
-      padding: 30px;
-      border-radius: 14px;
+      border-radius: 16px;
+      padding: 28px;
+      border: 1px solid #e5e9f2;
     }
 
-    .step-number {
-      display: inline-flex;
-      width: 38px;
-      height: 38px;
-      align-items: center;
-      justify-content: center;
-      background: #4f46e5;
+    .process-card strong {
+      display: block;
+      color: #4f46e5;
+      margin-bottom: 10px;
+    }
+
+    .process-card h3 {
+      margin-bottom: 8px;
+    }
+
+    .process-card p {
+      color: #687386;
+      font-size: 15px;
+    }
+
+    /* CTA */
+
+    .cta {
+      background: #111827;
       color: white;
-      border-radius: 50%;
-      font-weight: 800;
+      text-align: center;
+    }
+
+    .cta h2 {
+      font-size: 42px;
+      line-height: 1.15;
       margin-bottom: 15px;
     }
 
-    .audit {
+    .cta p {
+      color: #b9c0cd;
+      max-width: 650px;
+      margin: 0 auto 32px;
+      font-size: 17px;
+    }
+
+    /* FORM */
+
+    .form-section {
       background: white;
-      border-radius: 18px;
-      box-shadow: 0 15px 45px rgba(15, 23, 42, 0.10);
-      padding: 45px;
-      max-width: 700px;
-      margin: auto;
     }
 
-    .audit h2 {
-      font-size: 32px;
-      text-align: center;
-      margin-bottom: 10px;
-    }
-
-    .audit > p {
-      text-align: center;
-      color: #667085;
-      margin-bottom: 30px;
+    .form-wrap {
+      max-width: 720px;
+      margin: 0 auto;
     }
 
     form {
       display: grid;
-      gap: 15px;
+      gap: 16px;
     }
 
-    input {
+    label {
+      font-size: 14px;
+      font-weight: 700;
+      margin-bottom: -8px;
+    }
+
+    input,
+    textarea {
       width: 100%;
-      padding: 16px;
-      border: 1px solid #d7dce5;
-      border-radius: 8px;
-      font-size: 16px;
+      padding: 15px 16px;
+      border: 1px solid #d8deea;
+      border-radius: 9px;
+      font: inherit;
+      background: #fff;
+      color: #172033;
       outline: none;
     }
 
-    input:focus {
+    input:focus,
+    textarea:focus {
       border-color: #4f46e5;
-      box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.12);
+      box-shadow: 0 0 0 3px rgba(79,70,229,.1);
+    }
+
+    textarea {
+      min-height: 130px;
+      resize: vertical;
     }
 
     button {
-      border: none;
+      border: 0;
+      cursor: pointer;
+      font: inherit;
+      font-weight: 700;
+      padding: 15px 22px;
+      border-radius: 9px;
       background: #4f46e5;
       color: white;
-      padding: 16px;
-      border-radius: 8px;
-      font-size: 16px;
-      font-weight: 800;
-      cursor: pointer;
     }
 
     button:hover {
       background: #4338ca;
     }
 
-    #success {
-      display: none;
-      text-align: center;
-      padding: 20px;
-      background: #ecfdf3;
-      color: #067647;
-      border-radius: 8px;
-      margin-top: 15px;
-      font-weight: 700;
-    }
+    /* FOOTER */
 
     footer {
-      background: #111827;
-      color: #9ca3af;
-      text-align: center;
-      padding: 35px 20px;
+      background: #0b1120;
+      color: #9ca6b7;
+      padding: 35px 0;
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
     }
 
     footer strong {
       color: white;
     }
 
+    /* MOBILE */
+
     @media (max-width: 800px) {
-      .services,
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      nav {
-        padding: 16px 20px;
-      }
-
-      .nav-button {
+      .nav-links {
         display: none;
       }
 
-      .audit {
-        padding: 28px 20px;
+      .hero {
+        padding: 70px 0;
+      }
+
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 45px;
+      }
+
+      .service-grid,
+      .process-grid {
+        grid-template-columns: 1fr;
+      }
+
+      section {
+        padding: 65px 0;
+      }
+
+      .hero h1 {
+        font-size: 44px;
+      }
+
+      .cta h2 {
+        font-size: 34px;
       }
     }
   </style>
@@ -271,196 +438,229 @@
 <body>
 
   <nav>
-    <div class="logo">New Venture <span>AI</span></div>
-    <a class="nav-button" href="#audit">Get Your AI Audit</a>
+    <div class="container nav-inner">
+      <a href="#" class="logo">New Venture <span>AI</span></a>
+
+      <div class="nav-links">
+        <a href="#services">Services</a>
+        <a href="#process">How It Works</a>
+        <a href="#contact">Contact</a>
+        <a href="#contact" class="nav-button">Get Started</a>
+      </div>
+    </div>
   </nav>
 
-  <header class="hero">
-    <h1>Turn AI Into a Business Advantage.</h1>
+  <main>
 
-    <p>
-      We help businesses attract more customers, automate repetitive work,
-      and build smarter operations with practical AI solutions.
-    </p>
+    <section class="hero">
+      <div class="container hero-grid">
 
-    <a class="hero-button" href="#audit">Request Your Free AI Audit</a>
-  </header>
+        <div>
+          <div class="eyebrow">AI AUTOMATION FOR SMALL BUSINESS</div>
 
-  <section>
-    <div class="section-heading">
-      <h2>What We Do</h2>
-      <p>
-        Practical AI solutions designed to save time, improve customer
-        experiences, and create measurable business growth.
-      </p>
-    </div>
+          <h1>
+            Work smarter.<br>
+            <span>Grow faster.</span>
+          </h1>
 
-    <div class="services">
-
-      <div class="card">
-        <div class="card-icon">⚡</div>
-        <h3>AI Automation</h3>
-        <p>
-          Automate repetitive business tasks so your team can focus on
-          higher-value work.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">📈</div>
-        <h3>Growth Systems</h3>
-        <p>
-          Use AI-powered systems to improve lead generation, follow-up,
-          customer engagement, and conversions.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-icon">🤖</div>
-        <h3>AI Strategy</h3>
-        <p>
-          Identify where AI can create the biggest impact and build a
-          practical roadmap for implementation.
-        </p>
-      </div>
-
-    </div>
-  </section>
-
-  <div class="process">
-    <div class="process-inner">
-
-      <div class="section-heading">
-        <h2>How It Works</h2>
-        <p>Simple, practical, and focused on results.</p>
-      </div>
-
-      <div class="steps">
-
-        <div class="step">
-          <div class="step-number">1</div>
-          <h3>Assess</h3>
-          <p>
-            We identify opportunities where AI can save time, reduce costs,
-            or increase revenue.
+          <p class="hero-text">
+            New Venture AI helps businesses reduce repetitive work,
+            improve operations, and create more opportunities with practical
+            AI automation.
           </p>
+
+          <div class="hero-buttons">
+            <a href="#contact" class="primary-button">Request a Free AI Audit</a>
+            <a href="#services" class="secondary-button">Explore Services</a>
+          </div>
         </div>
 
-        <div class="step">
-          <div class="step-number">2</div>
-          <h3>Build</h3>
-          <p>
-            We design and implement the right automation and AI systems
-            for your business.
-          </p>
-        </div>
+        <div class="hero-card">
+          <div class="hero-card-top">THE NEW VENTURE AI APPROACH</div>
 
-        <div class="step">
-          <div class="step-number">3</div>
-          <h3>Grow</h3>
-          <p>
-            Your new systems help your business operate more efficiently
-            and scale with confidence.
-          </p>
+          <div class="metric">
+            <strong>01</strong>
+            <span>Find repetitive work that can be automated.</span>
+          </div>
+
+          <div class="metric">
+            <strong>02</strong>
+            <span>Build practical AI-powered workflows.</span>
+          </div>
+
+          <div class="metric">
+            <strong>03</strong>
+            <span>Give business owners more time to grow.</span>
+          </div>
         </div>
 
       </div>
-    </div>
-  </div>
+    </section>
 
-  <section id="audit">
+    <section id="services" class="services">
+      <div class="container">
 
-    <div class="audit">
+        <div class="section-heading">
+          <h2>AI that solves real business problems.</h2>
+          <p>
+            We focus on useful automation—not complicated technology for
+            technology's sake.
+          </p>
+        </div>
 
-      <h2>Get Your Free AI Audit</h2>
+        <div class="service-grid">
 
-      <p>
-        Tell us a little about your business and we'll identify potential
-        opportunities for AI automation and growth.
-      </p>
+          <div class="service-card">
+            <div class="service-number">01</div>
+            <h3>AI Business Audits</h3>
+            <p>
+              Identify where AI and automation can save time, improve
+              workflows, and create new opportunities.
+            </p>
+          </div>
 
-      <form
-        id="auditForm"
-        action="https://formspree.io/f/xjybgglv"
-        method="POST"
-      >
+          <div class="service-card">
+            <div class="service-number">02</div>
+            <h3>Workflow Automation</h3>
+            <p>
+              Reduce repetitive administrative work with streamlined
+              AI-assisted processes.
+            </p>
+          </div>
 
-        <input
-          type="text"
-          name="name"
-          placeholder="Your Name"
-          required
-        >
+          <div class="service-card">
+            <div class="service-number">03</div>
+            <h3>Lead & Customer Systems</h3>
+            <p>
+              Organize inquiries, follow-ups, and customer information so
+              opportunities are easier to manage.
+            </p>
+          </div>
 
-        <input
-          type="email"
-          name="email"
-          placeholder="Business Email"
-          required
-        >
-
-        <input
-          type="url"
-          name="website"
-          placeholder="Business Website URL"
-          required
-        >
-
-        <button type="submit">
-          Request My Free AI Audit
-        </button>
-
-      </form>
-
-      <div id="success">
-        ✓ Thank you! Your AI audit request has been submitted successfully.
+        </div>
       </div>
+    </section>
 
-    </div>
+    <section id="process" class="process">
+      <div class="container">
 
-  </section>
+        <div class="section-heading">
+          <h2>Simple process. Practical results.</h2>
+          <p>
+            We start with the business problem and work backward toward
+            the technology.
+          </p>
+        </div>
+
+        <div class="process-grid">
+
+          <div class="process-card">
+            <strong>STEP 01</strong>
+            <h3>Discover</h3>
+            <p>
+              We learn how your business operates and identify the biggest
+              opportunities for improvement.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <strong>STEP 02</strong>
+            <h3>Build</h3>
+            <p>
+              We design practical AI-assisted workflows around the areas
+              that matter most.
+            </p>
+          </div>
+
+          <div class="process-card">
+            <strong>STEP 03</strong>
+            <h3>Improve</h3>
+            <p>
+              We measure what works, refine the system, and look for the
+              next opportunity to automate.
+            </p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <section class="cta">
+      <div class="container">
+        <h2>Stop doing everything manually.</h2>
+        <p>
+          Let's find the work your business should no longer have to do by hand.
+        </p>
+        <a href="#contact" class="primary-button">Get Your Free AI Audit</a>
+      </div>
+    </section>
+
+    <section id="contact" class="form-section">
+      <div class="container form-wrap">
+
+        <div class="section-heading">
+          <h2>Let's talk about your business.</h2>
+          <p>
+            Tell us a little about your business and where you want help.
+            We'll use that information to identify potential AI opportunities.
+          </p>
+        </div>
+
+        <form action="https://formspree.io/f/xjybgglv" method="POST">
+
+          <label for="name">Name</label>
+          <input
+            id="name"
+            type="text"
+            name="name"
+            placeholder="Your name"
+            required
+          >
+
+          <label for="email">Email</label>
+          <input
+            id="email"
+            type="email"
+            name="email"
+            placeholder="you@example.com"
+            required
+          >
+
+          <label for="website">Business Website</label>
+          <input
+            id="website"
+            type="url"
+            name="website"
+            placeholder="https://yourbusiness.com"
+          >
+
+          <label for="message">What would you like to improve?</label>
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us about your business and what is taking too much time..."
+          ></textarea>
+
+          <button type="submit">Request My Free AI Audit</button>
+
+        </form>
+
+      </div>
+    </section>
+
+  </main>
 
   <footer>
-    <p>
-      © 2026 <strong>New Venture AI</strong>. AI-powered business growth and automation.
-    </p>
+    <div class="container footer-inner">
+      <div>
+        <strong>New Venture AI</strong>
+      </div>
+
+      <div>
+        © 2026 New Venture AI. All rights reserved.
+      </div>
+    </div>
   </footer>
-
-  <script>
-    const form = document.getElementById("auditForm");
-    const success = document.getElementById("success");
-
-    form.addEventListener("submit", async function(event) {
-      event.preventDefault();
-
-      const button = form.querySelector("button");
-      button.disabled = true;
-      button.textContent = "Submitting...";
-
-      try {
-        const response = await fetch(form.action, {
-          method: "POST",
-          body: new FormData(form),
-          headers: {
-            "Accept": "application/json"
-          }
-        });
-
-        if (response.ok) {
-          form.style.display = "none";
-          success.style.display = "block";
-        } else {
-          button.disabled = false;
-          button.textContent = "Request My Free AI Audit";
-          alert("Something went wrong. Please try again.");
-        }
-      } catch (error) {
-        button.disabled = false;
-        button.textContent = "Request My Free AI Audit";
-        alert("Something went wrong. Please try again.");
-      }
-    });
-  </script>
 
 </body>
 </html>
